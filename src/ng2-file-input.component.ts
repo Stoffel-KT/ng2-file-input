@@ -6,25 +6,26 @@ import { Ng2FileInputOptions } from './ng2-file-input-options.class';
 import { Ng2FileInputAction } from './ng2-file-input-action.enum';
 import { FileInput } from './file-input.interface';
 
+// <div fileDrop class="ng2-file-input-drop-container" [ngClass]="{'file-is-over': fileIsOver}" (fileOver)="fileOver($event)"
+// (onFileDrop)="onFileDrop($event)">
+// <span [innerHTML]="dropText"></span>
+// <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>
+// </div>
 @Component({
     selector: 'ng2-file-input',
     template: `<div class="ng2-file-input">
                     <div class="ng2-file-input-invalid text-danger" [hidden]="!invalidFile" [innerHTML]="invalidFileText"></div>
-                    <div fileDrop class="ng2-file-input-drop-container" [ngClass]="{'file-is-over': fileIsOver}" (fileOver)="fileOver($event)"
-                        (onFileDrop)="onFileDrop($event)">
-                        <span [innerHTML]="dropText"></span>
-                        <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>
-                    </div>
+                   
                     <div class="ng2-file-input-files" *ngIf="showPreviews">
                         <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
                             <span [innerHTML]="file.name" class="ng2-file-input-file-text"></span>
                             <img [src]="getObjectUrl(file)" *ngIf="file.type.indexOf('image')!==-1">
-                            <span class="ng2-file-input-file-text remove" (click)="removeFile(file)" *ngIf="removable">
+                            <span class="ng2-file-input-file-text remove" (click)="removeFile($event, file)" *ngIf="removable">
                                 <p [innerHTML]="removeText"></p>
                             </span> 
                         </div>
                     </div>
-                    <input type="file" #ng2FileInputSelect (change)="fileSelected($event)" [accept]="accept" [attr.multiple]="multiple ? true : null">
+                    <input type="file" #ng2FileInputSelect (change)="fileSelected($event)" [accept]="accept" [attr.multiple]="(multiple ? true : null)">
                 </div>`,
 })
 export class Ng2FileInputComponent implements OnInit, OnDestroy {
@@ -106,7 +107,7 @@ export class Ng2FileInputComponent implements OnInit, OnDestroy {
         let fileInput:FileInput=this.fileInputHandlerService.getFileInput(this.id);
         return fileInput ? fileInput.currentFiles : [];
     }
-    public removeFile(file: File) {
+    public removeFile($event, file: File) {
         if (this.removable) {
             let notRemovedFiles:File[]=this.fileInputHandlerService.removeFiles(this.id, [file]);
             if(notRemovedFiles.length===0){
@@ -115,6 +116,7 @@ export class Ng2FileInputComponent implements OnInit, OnDestroy {
             else{
                 this.emitOutput(file, Ng2FileInputAction.CouldNotRemove);
             }
+            $event.stopPropagation();
         }
     }
     public getObjectUrl(file: File): SafeResourceUrl {
