@@ -1,10 +1,10 @@
 {
-    "name": "ng2-file-input",
-    "version": "1.1.0",
+    "name": "custom-ng-file-input",
+    "version": "0.0.1",
     "description": "Angular component that implements a drag and drop or select file selection, including preview",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bergben/ng2-file-input.git"
+        "url": "git+https://github.com/Stoffel-KT/ng2-file-input.git"
     },
     "license": "MIT",
     "module": "./dist/ng2-file-input.js",
@@ -17,18 +17,8 @@
         "build": "npm run transpile && npm run package && npm run minify"
     },
     "author": {
-        "name": "Benedikt Berger",
-        "email": "benedikt.berger@live.de"
+        "name": "Kristof De Laet"
     },
-    "keywords": [
-        "angular",
-        "angular2",
-        "angular4",
-        "file",
-        "input",
-        "drag and drop",
-        "preview"
-    ],
     "dependencies": {
         "bergben-angular2-file-drop": ">=0.2.0"
     },
@@ -55,9 +45,5 @@
         "typescript": "~2.4.2",
         "uglify-js": "^3.1.8",
         "zone.js": "^0.8.18"
-    },
-    "bugs": {
-        "url": "https://github.com/bergben/ng2-file-input/issues"
-    },
-    "homepage": "https://github.com/bergben/ng2-file-input#readme"
+    }
 }
