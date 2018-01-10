@@ -94,6 +94,9 @@
 .margin-bottom-small {
   margin-bottom: 2rem
 }
+.no-padding {
+  padding: 0;
+}
 .ng2-file-input img {
   border-radius: 50%;
   width: 5.4rem;
@@ -118,7 +121,7 @@
 .ng2-file-input .icon-top-right {
   position: absolute;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 2.5rem;
   cursor: pointer;
   color: #7ccfdb;
 }
