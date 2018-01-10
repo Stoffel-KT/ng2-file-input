@@ -2,7 +2,7 @@ import { Ng2FileInputOptionsInterface } from "./ng2-file-input-options.interface
 
 export class Ng2FileInputOptions implements Ng2FileInputOptionsInterface {
     dropText:string="Drop file here";
-    browseText:string="Browse";
+    browseText:string="CHOOSE FILES";
     removeText:string="Remove";
     invalidFileText:string="You have picked an invalid or disallowed file."
     invalidFileTimeout:number=8000;

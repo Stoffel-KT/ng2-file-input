@@ -11,6 +11,10 @@ import { FileInput } from './file-input.interface';
 // <span [innerHTML]="dropText"></span>
 // <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>
 // </div>
+
+// <span class="ng2-file-input-file-text remove" (click)="removeFile($event, file)" *ngIf="removable">
+                            //     <p [innerHTML]="removeText"></p>
+                            // </span> 
 @Component({
     selector: 'ng2-file-input',
     template: `<div class="ng2-file-input">
@@ -18,11 +22,21 @@ import { FileInput } from './file-input.interface';
                     <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>                
                     <div class="ng2-file-input-files" *ngIf="showPreviews">
                         <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
-                            <span [innerHTML]="file.name" class="ng2-file-input-file-text"></span>
-                            <img [src]="getObjectUrl(file)" *ngIf="file.type.indexOf('image')!==-1">
-                            <span class="ng2-file-input-file-text remove" (click)="removeFile($event, file)" *ngIf="removable">
-                                <p [innerHTML]="removeText"></p>
-                            </span> 
+                            <div class="previewCard">
+                                <div class="row">
+                            <span class="icon-top-right" (click)="removeFile($event, file)" *ngIf="removable">
+                                <span class="fa fa-close"></span>
+                            </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                    <img [src]="getObjectUrl(file)" *ngIf="file.type.indexOf('image')!==-1">
+                                    </div>
+                                    <div class="col-md-10">
+                                    <span [innerHTML]="file.name" class="ng2-file-input-file-text"></span>
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                     <input type="file" #ng2FileInputSelect (change)="fileSelected($event)" [accept]="accept" [attr.multiple]="(multiple ? true : null)">
