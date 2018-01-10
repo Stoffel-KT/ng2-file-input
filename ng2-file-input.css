@@ -1,25 +1,25 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.ng2-file-input .ng2-file-input-drop-container {
+/* .ng2-file-input .ng2-file-input-drop-container {
   min-width: 200px;
   min-height: 50px;
   border: 2px dashed #333;
   padding: 7px;
-}
-.ng2-file-input .ng2-file-input-drop-container button {
+} */
+/* .ng2-file-input .ng2-file-input-drop-container button {
   margin-left: 25px;
-}
-.ng2-file-input .ng2-file-input-drop-container.file-is-over {
+} */
+/* .ng2-file-input .ng2-file-input-drop-container.file-is-over {
   border: 2px solid #007e40;
   color: #007e40;
-}
+} */
 .ng2-file-input input {
   display: none;
 }
-.ng2-file-input .ng2-file-input-files {
+/* .ng2-file-input .ng2-file-input-files {
   margin-top: 8px;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file {
   overflow: hidden;
   display: inline-block;
   margin-right: 5px;
@@ -27,8 +27,8 @@
   vertical-align: middle;
   text-align: center;
   position: relative;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file .ng2-file-input-file-text {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file .ng2-file-input-file-text {
   max-width: 110px;
   line-height: 16px;
   display: block;
@@ -37,16 +37,16 @@
   overflow: hidden;
   word-wrap: break-word;
   font-size: 12px;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file img {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file img {
   width: 120px;
   height: 120px;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file.image {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file.image {
   width: 120px;
   height: 120px;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -56,13 +56,13 @@
   white-space: nowrap;
   z-index: 5;
   text-overflow: ellipsis;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text:hover {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text:hover {
   overflow: auto;
   white-space: pre-wrap;
   text-overflow: initial;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text.remove, .ng2-file-input .ng2-file-input-files .ng2-file-input-file-text.remove {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text.remove, .ng2-file-input .ng2-file-input-files .ng2-file-input-file-text.remove {
   overflow:hidden;
   position: absolute;
   bottom: 0;
@@ -76,8 +76,8 @@
   right: 0;
   opacity: 0;
   padding: 0;
-}
-.ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text.remove p, .ng2-file-input .ng2-file-input-files .ng2-file-input-file-text.remove p {
+} */
+/* .ng2-file-input .ng2-file-input-files .ng2-file-input-file.image .ng2-file-input-file-text.remove p, .ng2-file-input .ng2-file-input-files .ng2-file-input-file-text.remove p {
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -87,15 +87,31 @@
   opacity: 1;
   cursor: pointer;
   background: rgba(169, 68, 66, 0.85);
-}
+} */
 .ng2-file-input img {
   border-radius: 50%;
   width: 5.4rem;
   height: 5.4rem;
+}
+.ng2-file-input .btn-secondary {
+  font-family: Montserrat, sans-serif;
+  background-color: #7ccfdb;
+  border: 1px solid #7ccfdb;
+  color: #fff;
+}
+.ng2-file-input .btn-sm {
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
 }
 .ng2-file-input .previewCard {
   width: 100%;
   background-color: #f9f9f9;
   border: 1px solid #e5e5e5;
   padding: 1rem;
+}
+.ng2-file-input .icon-top-right {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
 }
