@@ -88,6 +88,12 @@
   cursor: pointer;
   background: rgba(169, 68, 66, 0.85);
 } */
+.margin-top-small {
+  margin-top: 2rem;
+}
+.margin-bottom-small {
+  margin-bottom: 2rem
+}
 .ng2-file-input img {
   border-radius: 50%;
   width: 5.4rem;
@@ -114,4 +120,5 @@
   top: 0.5rem;
   right: 0.5rem;
   cursor: pointer;
+  color: #7ccfdb;
 }
