@@ -101,6 +101,7 @@
   border-radius: 50%;
   width: 5.4rem;
   height: 5.4rem;
+  position: relative;
 }
 .ng2-file-input .btn-secondary {
   font-family: Montserrat, sans-serif;
@@ -117,11 +118,12 @@
   background-color: #f9f9f9;
   border: 1px solid #e5e5e5;
   padding: 1rem;
+  position: relative;
 }
 .ng2-file-input .icon-top-right {
   position: absolute;
   top: 0.5rem;
-  right: 2.5rem;
+  right: 0.5rem;
   cursor: pointer;
   color: #7ccfdb;
 }
