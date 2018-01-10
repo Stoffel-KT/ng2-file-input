@@ -93,3 +93,9 @@
   width: 5.4rem;
   height: 5.4rem;
 }
+.ng2-file-input .previewCard {
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  padding: 1rem;
+}

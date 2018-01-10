@@ -20,13 +20,13 @@ import { FileInput } from './file-input.interface';
     template: `<div class="ng2-file-input">
                     <div class="ng2-file-input-invalid text-danger" [hidden]="!invalidFile" [innerHTML]="invalidFileText"></div>
                     <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>                
-                    <div class="ng2-file-input-files" *ngIf="showPreviews">
-                        <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
+                    <div class="ng2-file-input-files row" *ngIf="showPreviews">
+                        <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file col-md-4" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
                             <div class="previewCard">
                                 <div class="row">
-                            <span class="icon-top-right" (click)="removeFile($event, file)" *ngIf="removable">
-                                <span class="fa fa-close"></span>
-                            </span>
+                                    <span class="icon-top-right" (click)="removeFile($event, file)" *ngIf="removable">
+                                        <span class="fa fa-close"></span>
+                                    </span>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-2">
