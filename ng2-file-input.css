@@ -88,8 +88,14 @@
   cursor: pointer;
   background: rgba(169, 68, 66, 0.85);
 } */
+.fs-12{
+  font-size: 1.2rem;
+}
 .margin-top-mini {
   margin-top: 0.5rem;
+}
+.margin-top-tiny {
+  margin-top: 1rem;
 }
 .margin-top-small {
   margin-top: 2rem;
@@ -138,4 +144,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.ng2-file-input h2.ng2-file-input-file-text{
+  font-size: 1.6rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: #272727;
+}
+.ng2-file-input span.ng2-file-input-file-text{
+  font-size: 1.6rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #999;
 }
