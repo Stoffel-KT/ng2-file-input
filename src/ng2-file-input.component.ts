@@ -15,7 +15,7 @@ import { FileInput } from './file-input.interface';
     selector: 'ng2-file-input',
     template: `<div class="ng2-file-input">
                     <div class="ng2-file-input-invalid text-danger" [hidden]="!invalidFile" [innerHTML]="invalidFileText"></div>
-                   
+                    <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-primary" [innerHTML]="browseText"></button>                
                     <div class="ng2-file-input-files" *ngIf="showPreviews">
                         <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
                             <span [innerHTML]="file.name" class="ng2-file-input-file-text"></span>
@@ -67,6 +67,7 @@ export class Ng2FileInputComponent implements OnInit, OnDestroy {
             this.id=this.generateId();
         }
         this.fileInputHandlerService.add(this.id);
+        console.log('hallo');
     }
     ngOnDestroy(){
         this.fileInputHandlerService.remove(this.id);
