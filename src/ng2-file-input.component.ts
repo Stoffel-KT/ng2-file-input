@@ -35,7 +35,7 @@ import { FileInput } from './file-input.interface';
                                     </div>
                                     <div class="col-xs-10">
                                     <h2 [innerHTML]="file.name" class="ng2-file-input-file-text"></h2>
-                                    <div [innerHTML]="file.size.toFixed(2) + 'kb'" class="ng2-file-input-file-text margin-top-mini"></div>
+                                    <div [innerHTML]="(file.size / 1024).toFixed(2) + 'kb'" class="ng2-file-input-file-text margin-top-mini"></div>
                                     </div>
                                 </div> 
                             </div>
