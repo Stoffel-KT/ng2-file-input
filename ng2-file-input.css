@@ -88,11 +88,17 @@
   cursor: pointer;
   background: rgba(169, 68, 66, 0.85);
 } */
+.margin-top-mini {
+  margin-top: 0.5rem;
+}
 .margin-top-small {
   margin-top: 2rem;
 }
 .margin-bottom-small {
   margin-bottom: 2rem
+}
+.padding-left {
+  padding-left: 1rem;
 }
 .no-padding {
   padding: 0;
@@ -126,4 +132,10 @@
   right: 0.5rem;
   cursor: pointer;
   color: #7ccfdb;
+}
+.ng2-file-input .ng2-file-input-file-text {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
