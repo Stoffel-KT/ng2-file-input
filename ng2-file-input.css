@@ -1,3 +1,5 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 .ng2-file-input .ng2-file-input-drop-container {
   min-width: 200px;
   min-height: 50px;
@@ -85,4 +87,9 @@
   opacity: 1;
   cursor: pointer;
   background: rgba(169, 68, 66, 0.85);
+}
+.ng2-file-input img {
+  border-radius: 50%;
+  width: 5.4rem;
+  height: 5.4rem;
 }
