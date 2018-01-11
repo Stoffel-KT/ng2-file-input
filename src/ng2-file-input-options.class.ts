@@ -10,5 +10,5 @@ export class Ng2FileInputOptions implements Ng2FileInputOptionsInterface {
     multiple:boolean=false;
     accept:string='';
     showPreviews:boolean=true;
-    extensions:string[]=[];
+    extensions:string[]=['jpg','png'];
 }
