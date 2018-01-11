@@ -150,6 +150,7 @@
   right: 0.5rem;
   cursor: pointer;
   color: #7ccfdb;
+  z-index: 100;
 }
 .ng2-file-input .ng2-file-input-file-text {
   word-wrap: break-word;
