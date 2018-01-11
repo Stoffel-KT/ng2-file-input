@@ -33,8 +33,8 @@ import { FileInput } from './file-input.interface';
                                     <div class="col-xs-2 no-padding">
                                     <img [src]="getObjectUrl(file)" *ngIf="file.type.indexOf('image')!==-1">
                                     </div>
-                                    <div class="col-xs-10">
-                                    <h2 [innerHTML]="file.name" class="ng2-file-input-file-text"></h2>
+                                    <div class="col-xs-10 padding-top-7">
+                                    <h2 [innerHTML]="file.name" class="ng2-file-input-file-text no-margin"></h2>
                                     <div [innerHTML]="(file.size / 1024).toFixed(2) + 'kb'" class="ng2-file-input-file-text margin-top-mini"></div>
                                     </div>
                                 </div> 
