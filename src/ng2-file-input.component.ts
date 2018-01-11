@@ -41,7 +41,7 @@ import { FileInput } from './file-input.interface';
                             </div>
                         </div>
                     </div>
-                    <input type="file" #ng2FileInputSelect (change)="fileSelected($event)" [accept]="accept" [attr.multiple]="(multiple ? true : null)">
+                    <input type="file" #ng2FileInputSelect (change)="fileSelected($event)" accept="image/png, image/jpeg" [attr.multiple]="(multiple ? true : null)">
                 </div>`,
 })
 export class Ng2FileInputComponent implements OnInit, OnDestroy {
