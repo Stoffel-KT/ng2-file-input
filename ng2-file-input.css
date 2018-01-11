@@ -126,6 +126,12 @@
   background-color: #7ccfdb;
   border: 1px solid #7ccfdb;
   color: #fff;
+  outline: none !important;
+}
+.ng2-file-input .btn-secondary:hover {
+  background-color: #50bfcf;
+  border: 1px solid #50bfcf;
+  color: #fff;
 }
 .ng2-file-input .btn-sm {
   padding: 1rem 3rem;
