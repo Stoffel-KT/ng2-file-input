@@ -18,8 +18,8 @@ import { FileInput } from './file-input.interface';
 @Component({
     selector: 'ng2-file-input',
     template: `<div class="ng2-file-input">
-                    <div class="ng2-file-input-invalid text-danger" [hidden]="!invalidFile" [innerHTML]="invalidFileText"></div>
-                    <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-sm btn-secondary" [innerHTML]="browseText"></button>                
+    <button type="button" (click)="ng2FileInputSelect.click()" class="btn btn-sm btn-secondary inline-block" [innerHTML]="browseText"></button>                
+    <div class="ng2-file-input-invalid inline-block" [hidden]="!invalidFile" [innerHTML]="invalidFileText"></div>
                     <div class="margin-top-tiny fs-12">Only .png and .jpg supported</div>
                     <div class="ng2-file-input-files row margin-top-small" *ngIf="showPreviews">
                         <div *ngFor="let file of getCurrentFiles()" class="ng2-file-input-file col-md-4 margin-bottom-small" [ngClass]="{'image':file.type.indexOf('image')!==-1}">
